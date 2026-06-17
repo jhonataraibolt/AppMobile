@@ -134,8 +134,8 @@ export const styles = StyleSheet.create({
     borderTopWidth: 0.5,
     borderTopColor: '#dadada',
     backgroundColor: '#f7f7f7',
-    paddingBottom: 5,
-    paddingTop: 5,
+    paddingBottom: 1,
+    paddingTop: 3,
     paddingHorizontal:5
   },
   iconeImagem: {
@@ -166,28 +166,26 @@ export const styles = StyleSheet.create({
     marginTop: 4
   },
   tabAvatar: {
-    width: 25,
-    height: 25,
-    borderRadius: 12, 
-    marginBottom: 1,
-    marginTop: 1,  
-    borderWidth: 0.5,
+    width: 28,
+    height: 28,
+    borderRadius: 18, 
+    borderWidth: 1.3,
     borderColor: '#707070',
   },
   //icone meta
+  metaContainer: {
+    paddingHorizontal: 20, 
+    paddingBottom: 20,
+    alignItems: 'flex-end', 
+  },
   metaFloatingButton: {
     position: 'absolute', 
     bottom: 70,
     right: 20,
-    width: 40,
-    height: 40,
+    minWidth: 50,
+    height: 50,
     borderRadius: 50,   
   
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5, 
   },
   metaFloatingImage: {
     width: '100%',

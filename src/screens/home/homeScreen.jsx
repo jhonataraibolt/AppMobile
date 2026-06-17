@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import {  
-  Text, 
-  View, 
-  FlatList, 
-  Image, 
-  TouchableOpacity, 
+import {
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
   SafeAreaView,
   TextInput,
   ScrollView
 } from 'react-native';
 import ChatItem from '../../components/chatItem';
-import {DATA} from '../../data/data.jsx';
-import {styles} from './style';
+import { DATA } from '../../data/data.jsx';
+import { styles } from './style';
 
 import iconeChats from '../../assents/iconeChats.jpeg';
 import iconeComunit from '../../assents/iconeComunit.png';
@@ -23,7 +23,7 @@ import imagemPerfil from '../../assents/imagemPerfil.jpeg';
 import iconeMeta from '../../assents/iconeMeta.jpeg';
 
 export default function HomeScreen() {
-  
+
   const [activeFilter, setActiveFilter] = useState('Todas');
   const filters = ['Todas', 'Não lidas 1', 'Favoritos', 'Grupos', '+'];
 
@@ -31,8 +31,8 @@ export default function HomeScreen() {
     <View>
       <TouchableOpacity style={styles.archivedItem}>
         <Image
-            source={iconeArquivadas}
-            style={styles.archivedIcon}  
+          source={iconeArquivadas}
+          style={styles.archivedIcon}
         />
         <Text style={styles.archivedText}>Arquivadas</Text>
         <Text style={styles.archivedCount}>10</Text>
@@ -43,7 +43,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      
+
       {/* header */}
       <View style={styles.topActions}>
         <TouchableOpacity>
@@ -51,10 +51,10 @@ export default function HomeScreen() {
         </TouchableOpacity>
         <View style={styles.rightIcons}>
           <TouchableOpacity style={styles.iconButtonCamera}>
-           <Image
-            source={iconeCamera}
-            style={styles.iconeCamera}
-           />
+            <Image
+              source={iconeCamera}
+              style={styles.iconeCamera}
+            />
           </TouchableOpacity>
           <TouchableOpacity style={styles.iconButtonMais}>
             <Text style={styles.unreadTextButtonMais}>+</Text>
@@ -67,7 +67,7 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.searchContainer}>
-        <TextInput 
+        <TextInput
           style={styles.searchInput}
           placeholder="Pergunte a meta AI ou pesquise"
           placeholderTextColor="#8e8e93"
@@ -76,8 +76,8 @@ export default function HomeScreen() {
 
       {/* filtros */}
       <View style={styles.filtersWrapper}>
-        <ScrollView 
-          horizontal 
+        <ScrollView
+          horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.filtersContainer}
         >
@@ -106,7 +106,7 @@ export default function HomeScreen() {
         data={DATA}
         renderItem={({ item }) => <ChatItem item={item} />}
         keyExtractor={item => item.id}
-        ListHeaderComponent={ListHeader} 
+        ListHeaderComponent={ListHeader}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         contentContainerStyle={{ backgroundColor: '#fff' }}
       />
@@ -121,10 +121,10 @@ export default function HomeScreen() {
         </TouchableOpacity>
         <TouchableOpacity style={styles.tabItem}>
           <Image
-            source={iconeLigacao} 
+            source={iconeLigacao}
             style={styles.iconeImagem}
           />
-          <Text style={styles.tabLabel}>Chamadas</Text>
+          <Text style={styles.tabLabel}>Ligações</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tabItem}>
           <Image
@@ -134,27 +134,29 @@ export default function HomeScreen() {
           <Text style={styles.tabLabel}>Comunidades</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.tabItem, styles.tabItemActive]}>
-            <Image 
-                source={iconeChats} 
-                style={styles.iconeImagem}
-            />
+          <Image
+            source={iconeChats}
+            style={styles.iconeImagem}
+          />
           <Text style={styles.tabLabelActive}>Conversas</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tabItem}>
-          <Image 
-              source={imagemPerfil} 
-              style={styles.tabAvatar} 
+          <Image
+            source={imagemPerfil}
+            style={styles.tabAvatar}
           />
           <Text style={styles.tabLabel}>Você</Text>
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.metaFloatingButton} activeOpacity={0.8}>
-        <Image 
-          source={iconeMeta}
-          style={styles.metaFloatingImage} 
-        />
-      </TouchableOpacity>
+      <View style={styles.metaConteiner}>
+        <TouchableOpacity style={styles.metaFloatingButton} activeOpacity={0.8}>
+          <Image
+            source={iconeMeta}
+            style={styles.metaFloatingImage}
+          />
+        </TouchableOpacity>
+      </View>
 
     </SafeAreaView>
   );

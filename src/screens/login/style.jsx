@@ -73,7 +73,6 @@ export const styles = StyleSheet.create({
     marginRight: 10,
   },
   input: {
-    color:'#515151',
     fontWeight:'500',
     flex: 1,
     height: 44,

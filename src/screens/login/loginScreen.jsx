@@ -32,6 +32,7 @@ export default function LoginScreen({navigation}) {
             <TextInput 
               style={styles.input}
               placeholder="seu número de telefone"
+              placeholderTextColor={'#6a6a6a'}
               keyboardType="phone-pad"
               value={phoneNumber}
               onChangeText={setPhoneNumber}
