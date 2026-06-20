@@ -10,7 +10,7 @@ import {
   ScrollView
 } from 'react-native';
 import ChatItem from '../../components/chatItem';
-import { DATA } from '../../data/data.jsx';
+import { DATA } from '../../data/data.js';
 import { styles } from './style';
 
 import iconeChats from '../../assents/iconeChats.jpeg';

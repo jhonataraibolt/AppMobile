@@ -116,7 +116,7 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
   },
   //login com insta
- buttonContainer: {
+  buttonContainer: {
     flexDirection: 'row',       
     alignItems: 'center',        
     backgroundColor: '#f2f2f7',  
